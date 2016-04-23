@@ -34,7 +34,7 @@
     - dispatcher
     - stores
     - utils
-  -make files
+  - make files
     - entry.jsx
     - app.jsx
     - server_actions.js
