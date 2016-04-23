@@ -2,9 +2,9 @@
 
 # Use
 
+Use the either the first or second method to automate building your front end skeleton
   1. Place flux_install in root of a new rails project and
      call ./flux_install in the terminal from the root of your rails project.
-  OR
   2. Place flux_install in a bin file that's in your $PATH
      call flux_install in the terminal from the root of your rails project.
 
