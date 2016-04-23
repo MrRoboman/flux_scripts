@@ -128,18 +128,6 @@ module.exports = {\n
 # The Code Begins
 ##############################################
 
-# if [ $# -eq 0 ] ; then
-# 	echo Error: Please pass name of rails project
-# 	exit 1
-# fi
-#
-# rails new $1 --skip-turbolinks --database=postgresql
-#
-# cd $1
-
-# package.json
-# echo $package_json > package.json
-
 # NPM
 npm init --yes
 npm install --save babel-core@6.1.4
@@ -153,6 +141,7 @@ npm install --save react-dom@0.14.2
 npm install --save react-router@2.0.0
 npm install --save webpack@1.12.4
 
+# root route
 echo "Rails.application.routes.draw do\n
 \troot to: 'static_pages#root.html'\n
 end\n
@@ -161,8 +150,10 @@ end\n
 # webpack.config.js
 echo $webpack_config_js > webpack.config.js
 
+# .gitignore node_modules and bundle.js
 echo "\n\nnode_modules\nbundle.js" >> .gitignore
 
+# generate static_pages_controller and view
 rails generate controller static_pages
 echo "<div id='root'></div>" > app/views/static_pages/root.html
 
@@ -188,6 +179,7 @@ echo "<div id='root'></div>" > app/views/static_pages/root.html
       # Dispatcher
       echo $dispatcher > dispatcher/dispatcher.js
 
+      # api_utils
       echo $api_utils > utils/api_utils.js
 
 # return from frontend/ to project root
