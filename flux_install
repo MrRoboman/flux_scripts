@@ -88,9 +88,9 @@ module.exports = ServerActions;
 "
 
 # client_actions.js
-client_actions="var ApiUtil = require('../util/apiUtil.js');\n
+client_actions="var ApiUtil = require('../utils/api_utils.js');\n
 \n
-ClientActions = {\n
+var ClientActions = {\n
 // Example Function\n
 //  fetchAllPokemons: function() {\n
 //    ApiUtil.fetchAllPokemons();\n
@@ -105,7 +105,7 @@ dispatcher="var Dispatcher = require('flux').Dispatcher;\n
 module.exports = new Dispatcher();"
 
 # api_util.js
-api_utils="var ServerActions = require('../actions/serverActions.js');\n
+api_utils="var ServerActions = require('../actions/server_actions.js');\n
 \n
 module.exports = {\n
 // Example Function\n
